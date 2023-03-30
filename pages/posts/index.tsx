@@ -1,6 +1,7 @@
 import { GetStaticProps, GetStaticPropsContext } from 'next';
 import * as React from 'react';
 import Link from 'next/link';
+import { MainLayout } from '@/components/layout';
 export interface PostListPageProps {
     posts : any[]
 }
@@ -8,7 +9,7 @@ export interface PostListPageProps {
 export default function PostList ({posts}: PostListPageProps) {
     console.log(posts)
   return (
-    <>
+    <MainLayout>
     <h1>POST LIST</h1>
         <ul>
       {/* {posts.map((item)=><li>{item.name}</li>)} */}
@@ -27,7 +28,7 @@ export default function PostList ({posts}: PostListPageProps) {
        
         </li>)}
     </ul>
-    </>
+    </MainLayout>
 
   );
 }

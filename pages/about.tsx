@@ -2,12 +2,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import { MainLayout } from '@/components/layout'
 
 
 
-export default function Home() {
+export default function About() {
   return (
-    <>
+    <MainLayout>
       <Head>
         <title>About Next App with NextJS</title>
         <meta name="description" content="ABout" />
@@ -41,6 +42,6 @@ export default function Home() {
 
       
       </main>
-    </>
+    </MainLayout>
   )
 }
